@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F2F2F2"
+    tools:context=".module.mine.activity.ReceivePaymentActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/shape_receive_payment_bg"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="h,345:398"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_receive_payment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/text_qr_code_collection"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_18" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/color_F2F2F2"/>
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_200"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@color/color_F2F2F2"
+            android:maxWidth="@dimen/dp_200"
+            android:maxHeight="@dimen/dp_200"
+            android:scaleType="centerInside" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/color_F2F2F2"
+            android:layout_marginTop="@dimen/dp_30"/>
+        <TextView
+            android:id="@+id/tv_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_receive_payment_bg"
+            android:drawableLeft="@drawable/my_icon_eceiving_pay"
+            android:drawablePadding="@dimen/dp_6"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:text="@string/text_i_want_to_pay"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center_vertical"/>
+
+
+    </LinearLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_pay_way"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/ll_root"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/shape_item_search">
+        <RelativeLayout
+            android:id="@+id/rl_remain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/iv_change_icon"
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:scaleType="centerInside"
+                android:src="@drawable/my_icon_eceiving_balance_two"
+                android:visibility="visible"
+                />
+
+            <TextView
+                android:id="@+id/tv_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="余额"
+                android:layout_toRightOf="@id/iv_change_icon"
+                android:textColor="@color/color_1A1A1A"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:text="(优先使用此支付方式付款)"
+                android:textColor="@color/color_BFBFBF"
+                android:textSize="@dimen/sp_12"
+                android:layout_toRightOf="@id/tv_change"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/iv_remain_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_more"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+        //=========================================================
+        <TextView
+            android:id="@+id/tv_collection_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_receive_payment_bg"
+            android:drawableLeft="@drawable/my_change_collection_two"
+            android:drawableRight="@drawable/btn_more"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_19"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_20"
+            android:text="@string/text_collection_record"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_16"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_remain"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

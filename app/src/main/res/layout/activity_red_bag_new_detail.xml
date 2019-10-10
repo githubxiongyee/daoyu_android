@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".module.envelope.activity.RedBagBrandDetailActivity">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/redenvelopes_newproducts_bg"
+       app:layout_constraintHeight_percent="0.63"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_new_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="iPhone X"
+        android:textColor="@color/color_1A1A1A"
+        android:textSize="@dimen/sp_17"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_image" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_15"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:lines="3"
+        android:text="      采用全新设计，搭载色彩锐利的OLED屏幕，配备升级后的相机，可使用3D面部识（Face可使用3D面部识（Face"
+        android:textColor="@color/color_4D4D4D"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_new_product" />
+
+    <TextView
+        android:id="@+id/tv_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="售出价："
+        android:textColor="@color/color_BFBFBF"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@id/tv_buy"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥6288.00"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/sp_17"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_buy"
+        app:layout_constraintLeft_toRightOf="@id/tv_sale"
+        app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+    <TextView
+        android:id="@+id/tv_buy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_E35800"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_17"
+        android:paddingBottom="@dimen/dp_17"
+        android:text="兑换"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_receiving_red_envelope" />
+
+    <TextView
+        android:id="@+id/tv_receiving_red_envelope"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_17"
+        android:paddingBottom="@dimen/dp_17"
+        android:text="领取红包"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/tv_buy"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+</android.support.constraint.ConstraintLayout>

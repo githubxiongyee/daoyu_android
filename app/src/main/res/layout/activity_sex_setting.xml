@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_333333"
+    android:fitsSystemWindows="true"
+    tools:context=".module.mine.activity.SexSettingActivity">
+
+
+    <RadioGroup
+        android:id="@+id/rg_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_woman"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/profile_iocn_woman"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:paddingBottom="@dimen/dp_25"
+            android:text="女"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_16" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/rb_man"
+            android:drawableTop="@drawable/profile_iocn_man"
+            android:drawablePadding="@dimen/dp_10"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:paddingBottom="@dimen/dp_25"
+            android:text="男"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_16" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_F2F2F2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_sex" />
+</android.support.constraint.ConstraintLayout>

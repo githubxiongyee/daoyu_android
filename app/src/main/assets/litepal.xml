@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="chatDB" />
+    <version value="5" />
+    <list>
+        <mapping class="com.daoyu.chat.module.im.module.MessageDetailTable" />
+        <mapping class="com.daoyu.chat.module.im.module.ChatTable" />
+        <mapping class="com.daoyu.chat.module.im.module.ApplyFriendTable" />
+    </list>
+</litepal>

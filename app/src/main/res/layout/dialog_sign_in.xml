@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/signin_bg"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/dp_21"
+        android:layout_marginRight="@dimen/dp_21">
+
+        <TextView
+            android:id="@+id/tv_signed_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_35"
+            android:text="已连续签到1天"
+            android:textColor="#9E4516"
+            android:textSize="@dimen/sp_17"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_28"
+            android:layout_marginRight="@dimen/dp_14"
+            android:src="@drawable/signin_close"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_day1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_92"
+            android:layout_marginTop="@dimen/dp_43"
+            android:background="@drawable/signin_unclaimed_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cl_day2"
+            app:layout_constraintTop_toBottomOf="@id/tv_signed_days">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="第1天"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_9"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:background="@drawable/shape_sign_in_day"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="1元"
+                android:textColor="#B87551"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_day2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_92"
+            android:background="@drawable/signin_unclaimed_bg"
+            app:layout_constraintLeft_toRightOf="@id/cl_day1"
+            app:layout_constraintRight_toLeftOf="@id/cl_day3"
+            app:layout_constraintTop_toTopOf="@id/cl_day1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="第2天"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_9"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:background="@drawable/shape_sign_in_day"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="2元"
+                android:textColor="#B87551"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_day3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_92"
+            android:background="@drawable/signin_unclaimed_bg"
+            app:layout_constraintLeft_toRightOf="@id/cl_day2"
+            app:layout_constraintRight_toLeftOf="@id/cl_day4"
+            app:layout_constraintTop_toTopOf="@id/cl_day1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="第3天"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_9"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:background="@drawable/shape_sign_in_day"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="3元"
+                android:textColor="#B87551"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_day4"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_92"
+            android:background="@drawable/signin_unclaimed_bg"
+            app:layout_constraintLeft_toRightOf="@id/cl_day3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cl_day1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="第4天"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_9"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:background="@drawable/shape_sign_in_day"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="4元"
+                android:textColor="#B87551"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_day5"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_92"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/signin_unclaimed_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cl_day6"
+            app:layout_constraintTop_toBottomOf="@id/cl_day1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="第5天"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_9"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:background="@drawable/shape_sign_in_day"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="5元"
+                android:textColor="#B87551"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_day6"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_92"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/signin_unclaimed_bg"
+            app:layout_constraintLeft_toRightOf="@id/cl_day5"
+            app:layout_constraintRight_toLeftOf="@id/cl_day7"
+            app:layout_constraintTop_toBottomOf="@id/cl_day1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="第6天"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_9"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:background="@drawable/shape_sign_in_day"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="6元"
+                android:textColor="#B87551"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_day7"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_92"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/signin_unclaimed_bg"
+            app:layout_constraintLeft_toRightOf="@id/cl_day6"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_day1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="第7天"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_9"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:background="@drawable/shape_sign_in_day"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_3"
+                android:text="7元"
+                android:textColor="#B87551"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_sign_in_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/signin_btn"
+            android:paddingLeft="@dimen/dp_118"
+            android:paddingTop="@dimen/dp_22"
+            android:paddingRight="@dimen/dp_118"
+            android:paddingBottom="@dimen/dp_22"
+            android:text="签到"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_day7" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_sign_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/signin_signedin_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/dp_53"
+        android:layout_marginRight="@dimen/dp_53">
+
+        <TextView
+            android:id="@+id/tv_sign_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_206"
+            android:text="签到成功"
+            android:textColor="#FE6D60"
+            android:textSize="@dimen/sp_22"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/ll_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sign_ok"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_13">
+            <TextView
+                android:id="@+id/tv_money_txt0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恭喜您获得红包"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/sp_14" />
+            <TextView
+                android:id="@+id/tv_money_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#FE6D60"
+                android:textSize="@dimen/sp_14" />
+            <TextView
+                android:id="@+id/tv_money_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_37"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:background="@drawable/signin_signedin_btn"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_63"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_63"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="确认"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_money" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

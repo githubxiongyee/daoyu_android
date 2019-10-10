@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F2F2F2"
+    android:orientation="vertical"
+    tools:context=".module.mine.activity.SystemActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="@string/text_message_notification"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_16" />
+
+        <Switch
+            android:id="@+id/switch_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_account_security"
+        style="@style/style_text_setting"
+        android:text="@string/text_account_security" />
+
+    <TextView
+        android:id="@+id/tv_privacy_setting"
+        style="@style/style_text_setting"
+        android:text="@string/text_privacy_setting" />
+
+    <TextView
+        android:id="@+id/tv_about_us"
+        style="@style/style_text_setting"
+        android:text="@string/text_about_us" />
+
+    <TextView
+        android:id="@+id/tv_language_settings"
+        style="@style/style_text_setting"
+        android:text="@string/text_language_settings"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_57"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/shape_forget_complete_btn_bg"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14"
+        android:text="@string/text_logout"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_17" />
+</LinearLayout>

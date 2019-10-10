@@ -1,0 +1,398 @@
+[
+  {
+    "code": "[马]",
+    "png": "d_madaochenggong.png"
+  },
+  {
+    "code": "[吃元宵]",
+    "png": "d_chitangyuan.png"
+  },
+  {
+    "code": "[马上有对象]",
+    "png": "d_duixiang.png"
+  },
+  {
+    "code": "[发红包]",
+    "png": "o_fahongbao.png"
+  },
+  {
+    "code": "[炸鸡和啤酒]",
+    "png": "d_zhajipijiu.png"
+  },
+  {
+    "code": "[热气球]",
+    "png": "d_travel.png"
+  },
+  {
+    "code": "[最右]",
+    "png": "d_zuiyou.png"
+  },
+  {
+    "code": "[呵呵]",
+    "png": "d_hehe.png"
+  },
+  {
+    "code": "[嘻嘻]",
+    "png": "d_xixi.png"
+  },
+  {
+    "code": "[哈哈]",
+    "png": "d_haha.png"
+  },
+  {
+    "code": "[爱你]",
+    "png": "d_aini.png"
+  },
+  {
+    "code": "[挖鼻屎]",
+    "png": "d_wabishi.png"
+  },
+  {
+    "code": "[吃惊]",
+    "png": "d_chijing.png"
+  },
+  {
+    "code": "[晕]",
+    "png": "d_yun.png"
+  },
+  {
+    "code": "[泪]",
+    "png": "d_lei.png"
+  },
+  {
+    "code": "[馋嘴]",
+    "png": "d_chanzui.png"
+  },
+  {
+    "code": "[抓狂]",
+    "png": "d_zhuakuang.png"
+  },
+  {
+    "code": "[哼]",
+    "png": "d_heng.png"
+  },
+  {
+    "code": "[可爱]",
+    "png": "d_keai.png"
+  },
+  {
+    "code": "[怒]",
+    "png": "d_nu.png"
+  },
+  {
+    "code": "[汗]",
+    "png": "d_han.png"
+  },
+  {
+    "code": "[害羞]",
+    "png": "d_haixiu.png"
+  },
+  {
+    "code": "[睡觉]",
+    "png": "d_shuijiao.png"
+  },
+  {
+    "code": "[钱]",
+    "png": "d_qian.png"
+  },
+  {
+    "code": "[偷笑]",
+    "png": "d_touxiao.png"
+  },
+  {
+    "code": "[酷]",
+    "png": "d_ku.png"
+  },
+  {
+    "code": "[衰]",
+    "png": "d_shuai.png"
+  },
+  {
+    "code": "[闭嘴]",
+    "png": "d_bizui.png"
+  },
+  {
+    "code": "[鄙视]",
+    "png": "d_bishi.png"
+  },
+  {
+    "code": "[花心]",
+    "png": "d_huaxin.png"
+  },
+  {
+    "code": "[鼓掌]",
+    "png": "d_guzhang.png"
+  },
+  {
+    "code": "[悲伤]",
+    "png": "d_beishang.png"
+  },
+  {
+    "code": "[思考]",
+    "png": "d_sikao.png"
+  },
+  {
+    "code": "[生病]",
+    "png": "d_shengbing.png"
+  },
+  {
+    "code": "[亲亲]",
+    "png": "d_qinqin.png"
+  },
+  {
+    "code": "[怒骂]",
+    "png": "d_numa.png"
+  },
+  {
+    "code": "[太开心]",
+    "png": "d_taikaixin.png"
+  },
+  {
+    "code": "[懒得理你]",
+    "png": "d_landelini.png"
+  },
+  {
+    "code": "[右哼哼]",
+    "png": "d_youhengheng.png"
+  },
+  {
+    "code": "[左哼哼]",
+    "png": "d_zuohengheng.png"
+  },
+  {
+    "code": "[嘘]",
+    "png": "d_xu.png"
+  },
+  {
+    "code": "[委屈]",
+    "png": "d_weiqu.png"
+  },
+  {
+    "code": "[吐]",
+    "png": "d_tu.png"
+  },
+  {
+    "code": "[可怜]",
+    "png": "d_kelian.png"
+  },
+  {
+    "code": "[打哈气]",
+    "png": "d_dahaqi.png"
+  },
+  {
+    "code": "[挤眼]",
+    "png": "d_jiyan.png"
+  },
+  {
+    "code": "[失望]",
+    "png": "d_shiwang.png"
+  },
+  {
+    "code": "[顶]",
+    "png": "d_ding.png"
+  },
+  {
+    "code": "[疑问]",
+    "png": "d_yiwen.png"
+  },
+  {
+    "code": "[困]",
+    "png": "d_kun.png"
+  },
+  {
+    "code": "[感冒]",
+    "png": "d_ganmao.png"
+  },
+  {
+    "code": "[拜拜]",
+    "png": "d_baibai.png"
+  },
+  {
+    "code": "[黑线]",
+    "png": "d_heixian.png"
+  },
+  {
+    "code": "[阴险]",
+    "png": "d_yinxian.png"
+  },
+  {
+    "code": "[互粉]",
+    "png": "f_hufen.png"
+  },
+  {
+    "code": "[心]",
+    "png": "l_xin.png"
+  },
+  {
+    "code": "[伤心]",
+    "png": "l_shangxin.png"
+  },
+  {
+    "code": "[猪头]",
+    "png": "d_zhutou.png"
+  },
+  {
+    "code": "[熊猫]",
+    "png": "d_xiongmao.png"
+  },
+  {
+    "code": "[兔子]",
+    "png": "d_tuzi.png"
+  },
+  {
+    "code": "[握手]",
+    "png": "h_woshou.png"
+  },
+  {
+    "code": "[耶]",
+    "png": "h_ye.png"
+  },
+  {
+    "code": "[good]",
+    "png": "h_good.png"
+  },
+  {
+    "code": "[弱]",
+    "png": "h_ruo.png"
+  },
+  {
+    "code": "[不要]",
+    "png": "h_buyao.png"
+  },
+  {
+    "code": "[ok]",
+    "png": "h_ok.png"
+  },
+  {
+    "code": "[haha]",
+    "png": "h_haha.png"
+  },
+  {
+    "code": "[来]",
+    "png": "h_lai.png"
+  },
+  {
+    "code": "[威武]",
+    "png": "f_v5.png"
+  },
+  {
+    "code": "[鲜花]",
+    "png": "w_xianhua.png"
+  },
+  {
+    "code": "[钟]",
+    "png": "o_zhong.png"
+  },
+  {
+    "code": "[浮云]",
+    "png": "w_fuyun.png"
+  },
+  {
+    "code": "[飞机]",
+    "png": "o_feiji.png"
+  },
+  {
+    "code": "[月亮]",
+    "png": "w_yueliang.png"
+  },
+  {
+    "code": "[太阳]",
+    "png": "w_taiyang.png"
+  },
+  {
+    "code": "[微风]",
+    "png": "w_weifeng.png"
+  },
+  {
+    "code": "[沙尘暴]",
+    "png": "w_shachenbao.png"
+  },
+  {
+    "code": "[下雨]",
+    "png": "w_xiayu.png"
+  },
+  {
+    "code": "[给力]",
+    "png": "f_geili.png"
+  },
+  {
+    "code": "[神马]",
+    "png": "f_shenma.png"
+  },
+  {
+    "code": "[围观]",
+    "png": "o_weiguan.png"
+  },
+  {
+    "code": "[话筒]",
+    "png": "o_huatong.png"
+  },
+  {
+    "code": "[奥特曼]",
+    "png": "d_aoteman.png"
+  },
+  {
+    "code": "[草泥马]",
+    "png": "d_shenshou.png"
+  },
+  {
+    "code": "[萌]",
+    "png": "f_meng.png"
+  },
+  {
+    "code": "[囧]",
+    "png": "f_jiong.png"
+  },
+  {
+    "code": "[织]",
+    "png": "f_zhi.png"
+  },
+  {
+    "code": "[礼物]",
+    "png": "o_liwu.png"
+  },
+  {
+    "code": "[喜]",
+    "png": "f_xi.png"
+  },
+  {
+    "code": "[围脖]",
+    "png": "o_weibo.png"
+  },
+  {
+    "code": "[音乐]",
+    "png": "o_yinyue.png"
+  },
+  {
+    "code": "[绿丝带]",
+    "png": "o_lvsidai.png"
+  },
+  {
+    "code": "[蛋糕]",
+    "png": "o_dangao.png"
+  },
+  {
+    "code": "[蜡烛]",
+    "png": "o_lazhu.png"
+  },
+  {
+    "code": "[干杯]",
+    "png": "o_ganbei.png"
+  },
+  {
+    "code": "[男孩儿]",
+    "png": "d_nanhaier.png"
+  },
+  {
+    "code": "[女孩儿]",
+    "png": "d_nvhaier.png"
+  },
+  {
+    "code": "[肥皂]",
+    "png": "d_feizao.png"
+  },
+  {
+    "code": "[照相机]",
+    "png": "o_zhaoxiangji.png"
+  }
+]

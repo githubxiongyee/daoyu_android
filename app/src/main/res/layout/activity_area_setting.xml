@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_333333"
+    android:fitsSystemWindows="true"
+    tools:context=".module.mine.activity.NickSettingActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/common_setting_header" />
+
+    <EditText
+        android:id="@+id/edit_nick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:maxLength="16"
+        android:paddingLeft="@dimen/dp_71"
+        android:paddingTop="@dimen/dp_24"
+        android:paddingRight="@dimen/dp_15"
+        android:lines="1"
+        android:paddingBottom="@dimen/dp_24"
+        android:textColor="@color/color_1A1A1A"
+        android:textSize="@dimen/sp_16"
+        android:hint="请输入省、市"
+        app:layout_constraintTop_toBottomOf="@id/include" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中国"
+        android:textSize="@dimen/sp_17"
+        android:textColor="@color/color_1A1A1A"
+        app:layout_constraintTop_toBottomOf="@id/include"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_24"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_F2F2F2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_nick" />
+
+    <!-- 区域列表和侧边滑动栏-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintTop_toBottomOf="@id/edit_nick"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!-- 列表 去掉分割线和滑动条-->
+        <ListView
+            android:id="@+id/country_lvcountry"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/sortlistview_sidebar_background"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="30.0dp"
+            android:visibility="invisible" />
+
+        <!-- 侧边滑动栏 -->
+        <com.daoyu.chat.module.mine.view.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

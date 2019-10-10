@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.daoyu.chat">
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 录制声音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 获取手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 安装APP -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 录制视频 -->
+    <uses-permission android:name="android.permission.RECORD_VIDEO" /> <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 文件权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 读取联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- MQTT -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_app"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_app"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+        <activity android:name=".module.home.activity.UsageGuidelinesActivity"></activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.daoyu.chat.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver android:name=".utils.download.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".module.group.activity.SendGroupRedBagActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.GroupQRCodeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.RemoveGroupMemberActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.InviteGroupMemberActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.LordTransferActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.ModifyMyGroupNickActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.ModifyGroupNameActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.GroupMemberAllActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.ModifyGroupAnnouncementActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.GroupChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".module.group.activity.GroupListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.SendCardSearchActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.group.activity.GroupChatSettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.LocationDetailsActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.SendLocationActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.AddMobileContactActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.BatchesMoveActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.PaymentOrderActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.SettingPaymentPwdActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.AndroidOPermissionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.system.activity.AccountSecurityActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.PaymentSuccessActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.ContactDetailsActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.AddContactActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.ScanQRCodeActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".module.home.activity.PaymentActivity" />
+        <activity
+            android:name=".module.mine.activity.OrderActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.ChangeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.SystemActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.SignatureSettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.SexSettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.QRCardActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.NickSettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.UserInfoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.envelope.activity.ChangeDetailListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.envelope.activity.RedBagNewDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.envelope.activity.ReceivingRedSuccessActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.envelope.activity.RedBagBrandDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.login.activity.RegisteredActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.login.activity.ForgetPasswordActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.login.activity.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.PrivacySettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.AddressManageActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.AddAddressActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.ModifyAddressActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.OrderDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.ExpressionAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.FaceAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.AreaSettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.AboutUsAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.DYWebsiteAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.LanguageSettingAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.SearchCommonActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.SearchAddContactActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".module.chat.activity.ChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".module.system.activity.ConfirmNewPasswordActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.InputNewPasswordActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.LoginPasswordModifyActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".module.home.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.group.activity.StartGroupChatActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.CommonContactImageActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.ChatBigImageActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.CommonWebViewActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.ConfirmPayPasswordActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.NearbyPeopleActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.SendCardToFriendAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.BlackListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.WorkActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.LifeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.DemolitionRedPackageResultActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.RedPackageDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.SendRebBagActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.FriendHeaderActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.SettingRemarkNameActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.ContactDetailMenuActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.chat.activity.ChatSettingActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.system.activity.ForgetPasswordInnerActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.UnderstandAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.home.activity.ScanSendMoneyActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".module.group.activity.GroupRedPackageDetailActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".module.home.activity.GuidePageAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.envelope.activity.RewardRulesAct"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".module.mine.activity.AfterSalesAct"
+            android:launchMode="singleTask" />
+        <activity android:name=".module.home.activity.IOTAct" />
+        <activity android:name=".module.home.activity.LockAct" />
+        <activity android:name=".module.mine.activity.RemainDetailListAct" />
+        <activity android:name=".module.mine.activity.RemainAmountAct" />
+        <activity android:name=".module.mine.activity.GetOrPayActivity" />
+        <activity android:name=".module.mine.activity.ReceivePaymentActivity" />
+        <service android:name=".service.MqttService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="c94038c03497cefded3976a2396ba764" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service android:name=".service.MqttService" /> <!-- 新浪 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- QQ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1109855174" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+</manifest>

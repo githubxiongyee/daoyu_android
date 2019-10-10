@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F2F2F2"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".module.chat.activity.SendRebBagActivity">
+
+    <TextView
+        android:id="@+id/tv_money_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DEB887"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2"
+        android:text="单个红包不可超过200元"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_65"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/tv_reb_bag_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="金额"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_rad_bag_money"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:inputType="numberDecimal"
+            android:paddingRight="@dimen/dp_8"
+            android:hint="0.00"
+            android:textColor="@color/color_1A1A1A"
+            android:textColorHint="@color/color_BFBFBF"
+            android:textSize="@dimen/sp_23"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_reb_bag_money"
+            app:layout_constraintRight_toLeftOf="@id/tv_unit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="元"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_rad_bag_money"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <EditText
+        android:id="@+id/edit_greetings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_65"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@color/colorWhite"
+        android:hint="祝福语：恭喜发财，大吉大利！"
+        android:maxLength="50"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:textColor="@color/color_1A1A1A"
+        android:textColorHint="@color/color_BFBFBF"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_unit_RNB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_money"
+            android:layout_marginRight="@dimen/dp_2"
+            android:text="¥"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_unit_RNB"
+            android:text="0.00"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_34" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_44"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/selector_long_btn_enable_bg"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="塞钱进红包"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_17" />
+</LinearLayout>

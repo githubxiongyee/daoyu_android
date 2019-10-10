@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_receive"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_70"
+    android:background="@color/colorWhite"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.daoyu.chat.view.CircleImageView
+        android:id="@+id/iv_receive_header"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:src="@drawable/my_user_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_receive_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxWidth="@dimen/dp_160"
+        android:textColor="@color/color_1A1A1A"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintLeft_toRightOf="@id/iv_receive_header"
+        app:layout_constraintTop_toTopOf="@id/iv_receive_header"
+        tools:text="胡大大" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="08-08 12:00"
+        android:textColor="@color/color_737373"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintLeft_toLeftOf="@id/tv_receive_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_receive_name" />
+
+    <TextView
+        android:id="@+id/tv_rad_package_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_15"
+        android:textColor="@color/color_1A1A1A"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="8.88元" />
+</android.support.constraint.ConstraintLayout>

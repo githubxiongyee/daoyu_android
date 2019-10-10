@@ -1,0 +1,156 @@
+apply plugin: 'com.android.application'
+apply plugin: 'channel'
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.daoyu.chat"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 4
+        versionName "1.0.4"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '28.0.0'
+                }
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("file.keystore")
+            storePassword 'daoyubao_307chat'
+            keyAlias 'dy'
+            keyPassword 'daoyubao_307chat'
+        }
+
+        debug {
+            storeFile file("file.keystore")
+            storePassword 'daoyubao_307chat'
+            keyAlias 'dy'
+            keyPassword 'daoyubao_307chat'
+
+        }
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //Add the following configuration
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (variant.buildType.name.equals('debug')) {
+                outputFileName = "debug_daoyu_V${versionName}.apk"
+            }
+            if (variant.buildType.name.equals('release')) {
+                outputFileName = "release_daoyu_V${versionName}.apk"
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ["libs"]
+            jni.srcDirs = []
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //网络请求框架
+    implementation 'com.lzy.net:okgo:3.0.4'
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //GSON
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //权限请求框架
+    implementation 'com.yanzhenjie.permission:support:2.0.1'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.0.0'
+    //状态切换
+    implementation 'com.github.Bakumon:StatusLayoutManager:1.0.2'
+    //万能recyclerview适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //QR
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+    //高德
+    implementation 'com.amap.api:3dmap:5.0.0'
+    implementation 'com.amap.api:location:3.3.0'
+    implementation 'com.amap.api:search:5.0.0'
+    //获取首字母
+    implementation 'com.belerweb:pinyin4j:2.5.0'
+    //图片选择
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    //64K限制
+    implementation 'com.android.support:multidex:1.0.3'
+    //数据库
+    implementation 'org.litepal.android:java:3.0.0'
+    //Stetho
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    //七牛云
+    implementation 'com.qiniu:qiniu-android-sdk:7.3.+'
+
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+    implementation 'io.reactivex:rxjava:1.2.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.7.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.7.2'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.7.2'
+    //pdf
+    implementation 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
+    //更换二维码样式
+    implementation 'com.alibaba:fastjson:1.2.34'
+    implementation 'com.github.Othershe:CombineBitmap:1.0.5'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'org.bouncycastle:bcpkix-jdk15on:1.59'
+    implementation 'com.umeng.umsdk:analytics:8.0.0'
+    implementation 'com.umeng.umsdk:common:2.0.0'
+    implementation 'com.leon.channel:helper:2.0.3'
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+}

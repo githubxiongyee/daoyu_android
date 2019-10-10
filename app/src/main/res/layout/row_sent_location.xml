@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="13dp">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5">
+
+        <com.daoyu.chat.view.CircleImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:background="@drawable/head" />
+
+        <RelativeLayout
+            android:id="@+id/rl_location"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@id/iv_userhead"
+            android:background="@drawable/shape_card_bg">
+
+
+            <ImageView
+                android:id="@+id/iv_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter" />
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:id="@+id/tv_address_name"
+                android:layout_width="match_parent"
+                android:background="#80ffffff"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_1A1A1A"
+                android:layout_marginTop="@dimen/dp_3"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="gaga鲜语gaga鲜语gaga鲜语gaga鲜语gaga鲜语"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

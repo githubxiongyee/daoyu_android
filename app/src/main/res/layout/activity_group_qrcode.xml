@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/color_F2F2F2"
+    android:layout_height="match_parent"
+    tools:context=".module.group.activity.GroupQRCodeActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="@dimen/dp_330"
+        android:layout_height="@dimen/dp_400"
+        android:layout_marginTop="@dimen/dp_45"
+        android:background="@drawable/shape_choose_photo_bg"
+        android:elevation="@dimen/dp_2"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.daoyu.chat.view.CircleImageView
+                android:id="@+id/iv_header"
+                android:layout_width="@dimen/dp_49"
+                android:layout_height="@dimen/dp_49"
+                android:layout_marginTop="@dimen/dp_35"
+                android:src="@drawable/my_user_default"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="镜花桃园美食VIP分享群"
+                android:textColor="@color/color_1A1A1A"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@id/iv_header"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_header" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="@dimen/dp_189"
+            android:layout_height="@dimen/dp_189"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_24"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="扫描二维码，加入群组"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

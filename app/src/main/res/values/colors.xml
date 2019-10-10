@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E94E46</color>
+    <color name="colorPrimaryDark">#E94E46</color>
+    <color name="colorAccent">#E94E46</color>
+    <color name="color_333333">#333333</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="color_0D0D0D">#0d0d0d</color>
+    <color name="colorBlack">#000000</color>
+    <color name="color_F8F8F8">#F8F8F8</color>
+    <color name="color_FF2F1F">#FF2F1F</color>
+    <color name="color_D0D0D0">#D0D0D0</color>
+    <color name="color_929292">#929292</color>
+    <color name="color_FF8311">#FF8311</color>
+    <color name="color_F0F0F0">#F0F0F0</color>
+    <color name="color_F7F7F7">#F7F7F7</color>
+    <color name="color_ACACAC">#ACACAC</color>
+    <color name="color_5D5D5D">#5D5D5D</color>
+    <color name="color_F9F9F9">#F9F9F9</color>
+    <color name="colorTransparentBlack">#66000000</color>
+    <color name="color_242424">#242424</color>
+    <color name="color_E6E6E6">#E6E6E6</color>
+    <color name="color_1A1A1A">#1A1A1A</color>
+    <color name="color_BFBFBF">#BFBFBF</color>
+    <color name="color_F2F2F2">#F2F2F2</color>
+    <color name="color_808080">#808080</color>
+    <color name="color_E35800">#E35800</color>
+    <color name="color_4D4D4D">#4D4D4D</color>
+    <color name="color_010101">#010101</color>
+    <color name="viewfinder_mask">#50000000</color>
+
+    <color name="bg_gray2">#fff3f3f3</color>
+    <color name="color_D9D9D9">#D9D9D9</color>
+    <color name="color_B2B2B2">#B2B2B2</color>
+    <color name="color_F88F56">#F88F56</color>
+    <color name="color_E94E46">#E94E46</color>
+    <color name="color_EDEDED">#EDEDED</color>
+    <color name="color_B3B3B3">#B3B3B3</color>
+    <color name="color_EEA432">#EEA432</color>
+
+
+    <color name="orange_ffaa22">#ffaa22</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_737373">#737373</color>
+    <color name="color_FFBC63">#FFBC63</color>
+    <color name="color_F5F5F5">#F5F5F5</color>
+
+    <color name="progress_bar_bg">#1572a0</color>
+    <color name="progress_bar_progress">#89c5ff</color>
+    <color name="progress_bar_second_progress">#9989c5ff</color>
+    <color name="guide_btn_start">#d92739</color>
+    <color name="guide_btn_end">#ec939d</color>
+    <color name="guide_bg">#f8ffff</color>
+    <color name="blue_bg">#18A2E8</color>
+</resources>

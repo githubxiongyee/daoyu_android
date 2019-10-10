@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F2F2F2"
+    tools:context=".module.system.activity.AccountSecurityActivity">
+
+  <!--  <TextView
+        android:id="@+id/tv_fix_phone_number"
+        style="@style/style_text_setting"
+        android:text="更改手机号"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/dp_30"
+        android:gravity="center"
+        android:text="1342233556"
+        app:layout_constraintBottom_toBottomOf="@id/tv_fix_phone_number"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_fix_phone_number" />-->
+
+    <TextView
+        android:id="@+id/tv_setting_login_password"
+        style="@style/style_text_setting"
+        android:text="修改登录密码"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_setting_pay_password"
+        style="@style/style_text_setting"
+        android:text="设置支付密码"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_setting_login_password" />
+</android.support.constraint.ConstraintLayout>

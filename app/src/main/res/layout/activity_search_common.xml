@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F2F2F2"
+    android:orientation="vertical"
+    tools:context=".module.home.activity.ContactDetailsActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:id="@+id/edit_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_69"
+        android:background="@color/colorWhite"
+        android:drawableLeft="@drawable/maillist_add_search"
+        android:drawablePadding="@dimen/dp_18"
+        android:gravity="center_vertical"
+        android:hint="搜索联系人"
+        android:paddingLeft="@dimen/dp_20"
+        android:textColor="@color/color_1A1A1A"
+        android:textColorHint="@color/color_BFBFBF"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:imeOptions="actionSearch"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+</LinearLayout>

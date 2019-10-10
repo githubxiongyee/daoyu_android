@@ -1,0 +1,223 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--继承Theme.AppCompat.NoActionBar，不显示标题栏-->
+    <style name="TransparentTheme" parent="Theme.AppCompat.NoActionBar">
+        <!--不设置activity进入和退出动画样式-->
+        <item name="android:windowAnimationStyle">@null</item>
+        <!--设置窗口的背景为透明，设置透明背景必须要设置此项-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--设置窗口的背景是否为半透明，设置透明背景必须要设置此项-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--设置状态栏的背景为半透明-->
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="style_btn_radio">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="style_view_line">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/color_F0F0F0</item>
+    </style>
+
+    <style name="style_btn_bg">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="style_tab_item">
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">9dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_0D0D0D</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="style_view_line_forget_password">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:background">@color/color_E6E6E6</item>
+    </style>
+
+    <style name="style_text_setting">
+    <item name="android:background">@color/colorWhite</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:drawableRight">@drawable/btn_more</item>
+    <item name="android:paddingLeft">@dimen/dp_15</item>
+    <item name="android:paddingTop">@dimen/dp_22</item>
+    <item name="android:paddingRight">@dimen/dp_15</item>
+    <item name="android:paddingBottom">@dimen/dp_22</item>
+    <item name="android:textColor">@color/color_1A1A1A</item>
+    <item name="android:textSize">@dimen/sp_16</item>
+</style>
+
+    <style name="style_text_chat_details">
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableRight">@drawable/btn_more</item>
+        <item name="android:paddingLeft">@dimen/dp_15</item>
+        <item name="android:paddingTop">@dimen/dp_15</item>
+        <item name="android:paddingRight">@dimen/dp_15</item>
+        <item name="android:paddingBottom">@dimen/dp_15</item>
+        <item name="android:textColor">@color/color_1A1A1A</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="style_text_setting_no_drawableRight">
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/dp_15</item>
+        <item name="android:paddingTop">@dimen/dp_25</item>
+        <item name="android:paddingRight">@dimen/dp_15</item>
+        <item name="android:paddingBottom">@dimen/dp_20</item>
+        <item name="android:textColor">@color/color_1A1A1A</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="style_btn_color_e94e46">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/dp_15</item>
+        <item name="android:layout_marginTop">@dimen/dp_44</item>
+        <item name="android:layout_marginRight">@dimen/dp_15</item>
+        <item name="android:background">@drawable/shape_forget_complete_btn_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/dp_12</item>
+        <item name="android:paddingBottom">@dimen/dp_12</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/sp_17</item>
+    </style>
+
+    <style name="style_text_16_1a1a1a">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_1A1A1A</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="style_payment_ways">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">@dimen/dp_16</item>
+        <item name="android:paddingLeft">@dimen/dp_15</item>
+        <item name="android:paddingTop">@dimen/dp_18</item>
+        <item name="android:paddingRight">@dimen/dp_15</item>
+        <item name="android:paddingBottom">@dimen/dp_18</item>
+        <item name="android:textColor">@color/color_1A1A1A</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:drawableRight">@drawable/selector_rb_payment_way_drawable</item>
+    </style>
+
+    <style name="style_edit_view">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingRight">@dimen/dp_15</item>
+        <item name="android:textColor">@color/color_1A1A1A</item>
+        <item name="android:textColorHint">@color/color_BFBFBF</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="style_contact_menu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:drawablePadding">@dimen/dp_15</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/dp_15</item>
+        <item name="android:paddingTop">@dimen/dp_12</item>
+        <item name="android:paddingBottom">@dimen/dp_12</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    //===================================================================
+
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:paddingBottom">2dip</item>
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">20dip</item>
+        <item name="android:textColor">@color/bg_gray2</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/timestampe_bg</item>
+    </style>
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--更新对话框的样式-->
+    <style name="upgrade_dialog_style" parent="android:Theme.Dialog">
+        <!-- 去掉默认的标题栏-->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 让背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme_AudioDialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

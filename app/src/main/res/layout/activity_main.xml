@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <RadioGroup
+        android:id="@+id/rg_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_red_bag"
+            style="@style/style_btn_radio"
+            android:drawableTop="@drawable/selector_rb_red_bag"
+            android:text="@string/text_red_bag" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rb_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableTop="@drawable/selector_rb_chat"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/text_chat"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="@drawable/shape_bad_point_bg"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_11"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/style_btn_radio"
+            android:drawableTop="@drawable/selector_rb_mine"
+            android:text="@string/text_mine" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_F8F8F8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rg_menu" />
+
+
+    <com.daoyu.chat.view.NoneSwipeViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/view_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
